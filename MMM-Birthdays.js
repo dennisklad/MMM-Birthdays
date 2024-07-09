@@ -9,22 +9,20 @@
  */
 Module.register("MMM-Birthdays", {
 
-
 	defaults: {
 		limit:4,
 		people:[{name:"Marco",birthdate:"1973-12-30"}]
 	},
 	start:function() {
-		this.calculate()		
+		this.calculate()
 
 		var self=this
 
-			
 			setInterval(function(){
 				self.calculate()
 				self.updateDom()
 				},60*60*1000) // update every hour
-			
+
 	},
 	calculate : function(){
 		var now=new Date(new Date().toLocaleString("sv").substring(0,10))
@@ -40,14 +38,13 @@ Module.register("MMM-Birthdays", {
 			p.age=thisyear-byear
 			var diff=new Date(thisyear,bmonth,bday).getTime()-today
 			if (diff<0) {diff=new Date(thisyear+1,bmonth,bday).getTime()-today
-				      p.age=thisyear-byear+1}
+				      p.age=thisyear-byear}
 			p.days=Math.floor(diff/1000/60/60/24)
 			p.date=bday+" "+months[bmonth]
 			p.birthyear=byear
 			p.day=bday
 		})
 		this.config.people.sort(function(a,b){return a.days-b.days})
-		
 	},
 
 
@@ -57,8 +54,6 @@ Module.register("MMM-Birthdays", {
 	},
 
 	getTemplateData: function () {
-
 		return this.config;
 	}
-	
 });
