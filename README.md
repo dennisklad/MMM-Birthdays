@@ -1,5 +1,7 @@
 # Module: MMM-Birthdays, a module to display upcoming birthdays
 
+![image](https://github.com/dennisklad/MMM-Birthdays/assets/53832177/edeefa60-4f77-4d98-a5fe-82b15c2aba2d)
+
 The MMM-Birthdays modules is derived from the inital development BIRTHDAYS created by Marco Merens.
 
 You can now see what will be the age of someone and his/her birthdate.
