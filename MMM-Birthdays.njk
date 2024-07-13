@@ -1,11 +1,14 @@
-<span class="xsmall" style="line-height=2px;">
-	{% for p in people.slice(0,limit) %}
-	🎂&ensp;{{p.name}} 
-	{% if p.days == 0 %}
-	is {{p.age}} today!!!
-	{% else %}
-	will be {{p.age}} in {{p.days}} days!&ensp;({{p.date}})
-	{% endif %}
-	</br>	
-	{% endfor %}
-</span>
+<table>
+    {% for p in people.slice(0,limit) %}
+	    <tr>
+	        <td>🎂&ensp;{{p.name}}
+	            {% if p.days == 0 %}
+	            is <b>{{p.age}}</b> today!!!
+	            {% else %}
+	            will be <b>{{p.age}}</b> in {{p.days}} days!
+	            {% endif %}
+	        </td>
+	        <td align="right">{{p.date}}</td>
+	    </tr>
+    {% endfor %}
+</table>
