@@ -9,7 +9,6 @@ You can now see what will be the age of someone and his/her birthdate.
 The 'BIRTHDAYS' module is a costum module for [MagicMirror](https://github.com/MichMich/MagicMirror).
 It displays the name, birthday and remaining days of a list of people sorted by whoever is next.
 
-
 The names and birthdays are provided on configuration. The module then calculates which one is next and the remaining days.
 The dates are recalculated every hour.
 
@@ -45,7 +44,6 @@ modules: [
     }
   }
 ];
-
 ```
 
 ## Configuration options
